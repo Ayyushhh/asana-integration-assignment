@@ -224,3 +224,23 @@
 [2025-04-24 02:25:48] INFO: 📥 Received 1 event(s) from Asana:
 [2025-04-24 02:25:48] INFO: 1. Resource 1210056150801627 (task) - Action: changed
 [2025-04-24 02:25:48] HTTP: ::1 - - [23/Apr/2025:20:55:48 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:27:25] INFO: 📥 Received 2 event(s) from Asana:
+[2025-04-24 02:27:25] INFO: 1. Resource 1210062219376377 (task) - Action: added
+[2025-04-24 02:27:25] INFO: 2. Resource 1210062219376377 (task) - Action: added
+[2025-04-24 02:27:25] HTTP: ::1 - - [23/Apr/2025:20:57:25 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:27:25] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:27:25] INFO: 1. Resource 1210062400896912 (story) - Action: added
+[2025-04-24 02:27:25] HTTP: ::1 - - [23/Apr/2025:20:57:25 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:27:34] INFO: 📥 Received 3 event(s) from Asana:
+[2025-04-24 02:27:34] INFO: 1. Resource 1210062219376377 (task) - Action: added
+[2025-04-24 02:27:34] INFO: 2. Resource 1210062219376377 (task) - Action: changed
+[2025-04-24 02:27:34] INFO: 3. Resource 1210062219376377 (task) - Action: changed
+[2025-04-24 02:27:34] HTTP: ::1 - - [23/Apr/2025:20:57:34 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:27:35] INFO: 📥 Received 3 event(s) from Asana:
+[2025-04-24 02:27:35] INFO: 1. Resource 1210062219376377 (task) - Action: changed
+[2025-04-24 02:27:35] INFO: 2. Resource 1210062219376377 (task) - Action: changed
+[2025-04-24 02:27:35] INFO: 3. Resource 1210062273224130 (story) - Action: added
+[2025-04-24 02:27:35] HTTP: ::1 - - [23/Apr/2025:20:57:35 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:27:38] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:27:38] INFO: 1. Resource 1210062272145510 (story) - Action: added
+[2025-04-24 02:27:38] HTTP: ::1 - - [23/Apr/2025:20:57:38 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
