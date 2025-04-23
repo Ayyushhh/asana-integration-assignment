@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { refreshAccessToken } from '../services/refreshToken.service.js';
 import logger from '../utils/logger.js';
+import { asanaWorkspaceGID } from '../config/index.js';
 
 
 const getTasks = async (req, res) => {
@@ -20,7 +21,7 @@ const getTasks = async (req, res) => {
       },
       params: {
         assignee: 'me',
-        workspace: '1210055946840286',
+        workspace: asanaWorkspaceGID,
         completed_since: 'now',
         opt_fields: 'name,completed,due_on'
       }

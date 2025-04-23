@@ -15,3 +15,212 @@
 [2025-04-24 00:11:37] HTTP: ::1 - - [23/Apr/2025:18:41:37 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A8cb04795471f9a86366bfda24de7d600&state=ymv4unNrhtFntcPe0h-4Gw HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
 [2025-04-24 00:11:40] INFO: Successfully fetched tasks from Asana
 [2025-04-24 00:11:40] HTTP: ::1 - - [23/Apr/2025:18:41:40 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:50:33] HTTP: ::1 - - [23/Apr/2025:19:20:33 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:23:11] WARN: Invalid state parameter detected. Potential CSRF attack.
+[2025-04-24 01:23:11] HTTP: ::1 - - [23/Apr/2025:19:53:11 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A8cb04795471f9a86366bfda24de7d600&state=ymv4unNrhtFntcPe0h-4Gw HTTP/1.1" 403 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:23:14] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:23:14] HTTP: ::1 - - [23/Apr/2025:19:53:14 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:23:14] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:23:14] HTTP: ::1 - - [23/Apr/2025:19:53:14 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:23:16] INFO: Successfully obtained access token
+[2025-04-24 01:23:17] INFO: ✅ Stored new X-Hook-Secret from Asana
+[2025-04-24 01:23:17] HTTP: ::1 - - [23/Apr/2025:19:53:17 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 01:23:17] INFO: [Asana Webhook] Registered successfully
+[2025-04-24 01:23:17] HTTP: ::1 - - [23/Apr/2025:19:53:17 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A23ab21df02a26094ab081ee1d76151ed&state=LCfNC2wjoiaHPGWT4BmV3g HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:23:18] INFO: 📥 Received 0 event(s) from Asana:
+[2025-04-24 01:23:18] HTTP: ::1 - - [23/Apr/2025:19:53:18 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 01:23:21] INFO: Successfully fetched tasks from Asana
+[2025-04-24 01:23:21] HTTP: ::1 - - [23/Apr/2025:19:53:21 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:29:36] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 01:29:36] INFO: 1. Resource [object Object] - Action: changed
+[2025-04-24 01:29:36] HTTP: ::1 - - [23/Apr/2025:19:59:36 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 01:31:55] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:31:55] HTTP: ::1 - - [23/Apr/2025:20:01:55 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 01:32:26] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:32:26] HTTP: ::1 - - [23/Apr/2025:20:02:26 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 01:32:43] WARN: Invalid state parameter detected. Potential CSRF attack.
+[2025-04-24 01:32:43] HTTP: ::1 - - [23/Apr/2025:20:02:43 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A23ab21df02a26094ab081ee1d76151ed&state=LCfNC2wjoiaHPGWT4BmV3g HTTP/1.1" 403 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:32:44] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:32:44] HTTP: ::1 - - [23/Apr/2025:20:02:44 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:32:45] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:32:45] HTTP: ::1 - - [23/Apr/2025:20:02:45 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:32:46] INFO: Successfully obtained access token
+[2025-04-24 01:32:48] ERROR: [Asana Webhook] Registration failed:
+[2025-04-24 01:32:48] ERROR: OAuth failed: Request failed with status code 403
+[2025-04-24 01:32:48] HTTP: ::1 - - [23/Apr/2025:20:02:48 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A51bfabbd9ad880aa05b86846f98d178c&state=A_qgOJThAwZmyf2muvt89A HTTP/1.1" 500 12 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:32:55] ERROR: OAuth failed: Request failed with status code 400
+[2025-04-24 01:32:55] HTTP: ::1 - - [23/Apr/2025:20:02:55 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A51bfabbd9ad880aa05b86846f98d178c&state=A_qgOJThAwZmyf2muvt89A HTTP/1.1" 500 12 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:33:22] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:33:22] HTTP: ::1 - - [23/Apr/2025:20:03:22 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:33:22] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:33:22] HTTP: ::1 - - [23/Apr/2025:20:03:22 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:33:24] INFO: Successfully obtained access token
+[2025-04-24 01:33:25] ERROR: [Asana Webhook] Registration failed:
+[2025-04-24 01:33:25] ERROR: OAuth failed: Request failed with status code 403
+[2025-04-24 01:33:25] HTTP: ::1 - - [23/Apr/2025:20:03:25 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A9b1fdf7931f59c152bc307432fff197c&state=SssV7KWyTiMGKilbB61geA HTTP/1.1" 500 12 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:33:26] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:33:26] HTTP: ::1 - - [23/Apr/2025:20:03:26 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 01:35:27] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:35:27] HTTP: ::1 - - [23/Apr/2025:20:05:27 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 01:42:23] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:42:23] HTTP: ::1 - - [23/Apr/2025:20:12:23 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:42:24] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:42:24] HTTP: ::1 - - [23/Apr/2025:20:12:24 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:42:26] INFO: Successfully obtained access token
+[2025-04-24 01:42:27] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://9007-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 01:42:27] HTTP: ::1 - - [23/Apr/2025:20:12:27 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3Af093b61dbcb3194932f64e12ec66beec&state=sYlPpbu02WMaSJR8hoZBIw HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:42:29] INFO: Successfully fetched tasks from Asana
+[2025-04-24 01:42:29] HTTP: ::1 - - [23/Apr/2025:20:12:29 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:47:29] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:47:29] HTTP: ::1 - - [23/Apr/2025:20:17:29 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 01:47:32] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:47:32] HTTP: ::1 - - [23/Apr/2025:20:17:32 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:47:34] INFO: Successfully obtained access token
+[2025-04-24 01:47:34] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://9007-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 01:47:34] HTTP: ::1 - - [23/Apr/2025:20:17:34 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A711cb4c87c870a17d4b8ae8a3a2d76fd&state=LcrMv3d2-huVgGvfWmIDuw HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:47:38] INFO: Successfully fetched tasks from Asana
+[2025-04-24 01:47:38] HTTP: ::1 - - [23/Apr/2025:20:17:38 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:51:35] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:51:35] HTTP: ::1 - - [23/Apr/2025:20:21:35 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:51:35] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 01:51:35] HTTP: ::1 - - [23/Apr/2025:20:21:35 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:51:37] INFO: Successfully obtained access token
+[2025-04-24 01:51:38] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://9007-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 01:51:38] HTTP: ::1 - - [23/Apr/2025:20:21:38 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3Affc8af9cf69e3ca9fb377c543e191331&state=3PWa8KTPLTvQrRRVRpE3_Q HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:51:55] INFO: Successfully fetched tasks from Asana
+[2025-04-24 01:51:55] HTTP: ::1 - - [23/Apr/2025:20:21:55 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 01:54:45] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:54:45] HTTP: ::1 - - [23/Apr/2025:20:24:45 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "PostmanRuntime/7.43.0"
+[2025-04-24 01:58:18] ERROR: ❌ Webhook request not recognized
+[2025-04-24 01:58:18] HTTP: ::1 - - [23/Apr/2025:20:28:18 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "PostmanRuntime/7.43.0"
+[2025-04-24 02:03:30] ERROR: ❌ Webhook request not recognized
+[2025-04-24 02:03:30] HTTP: ::1 - - [23/Apr/2025:20:33:30 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 02:04:25] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:04:25] HTTP: ::1 - - [23/Apr/2025:20:34:25 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:04:26] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:04:26] HTTP: ::1 - - [23/Apr/2025:20:34:26 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:04:27] INFO: Successfully obtained access token
+[2025-04-24 02:04:28] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://9007-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 02:04:28] HTTP: ::1 - - [23/Apr/2025:20:34:28 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A52767d05325ca316c4fdfe7dddc6ecd0&state=vvar8az6SEhzwfjNoydxrg HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:04:46] INFO: Successfully fetched tasks from Asana
+[2025-04-24 02:04:46] HTTP: ::1 - - [23/Apr/2025:20:34:46 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:03] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:07:03] HTTP: ::1 - - [23/Apr/2025:20:37:03 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:03] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:07:03] HTTP: ::1 - - [23/Apr/2025:20:37:03 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:05] INFO: Successfully obtained access token
+[2025-04-24 02:07:07] INFO: ✅ Stored new X-Hook-Secret from Asana
+[2025-04-24 02:07:07] HTTP: ::1 - - [23/Apr/2025:20:37:07 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:07:08] INFO: 📥 Received 0 event(s) from Asana:
+[2025-04-24 02:07:08] HTTP: ::1 - - [23/Apr/2025:20:37:08 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:07:08] WARN: Invalid state parameter detected. Potential CSRF attack.
+[2025-04-24 02:07:08] HTTP: ::1 - - [23/Apr/2025:20:37:08 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A73ba80d59288dc67c06aa8bb57531ff6&state=P5omUfJq6nwN9UH6g9Qxqw HTTP/1.1" 403 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:11] HTTP: ::1 - - [23/Apr/2025:20:37:11 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:13] HTTP: ::1 - - [23/Apr/2025:20:37:13 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:17] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:07:17] HTTP: ::1 - - [23/Apr/2025:20:37:17 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:17] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:07:17] HTTP: ::1 - - [23/Apr/2025:20:37:17 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:19] INFO: Successfully obtained access token
+[2025-04-24 02:07:20] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://478a-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 02:07:20] HTTP: ::1 - - [23/Apr/2025:20:37:20 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3Ad02c70d926cf150d40bedc36f2b2d6e8&state=88Eu3anWd8kUjELU1ZwxbA HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:26] INFO: Successfully fetched tasks from Asana
+[2025-04-24 02:07:26] HTTP: ::1 - - [23/Apr/2025:20:37:26 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:07:59] INFO: 📥 Received 5 event(s) from Asana:
+[2025-04-24 02:07:59] INFO: 1. Resource 1210062219376372 (task) - Action: added
+[2025-04-24 02:07:59] INFO: 2. Resource 1210062219376372 (task) - Action: added
+[2025-04-24 02:07:59] INFO: 3. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:07:59] INFO: 4. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:07:59] INFO: 5. Resource 1210062225527136 (story) - Action: added
+[2025-04-24 02:07:59] HTTP: ::1 - - [23/Apr/2025:20:37:59 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:08:00] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:08:00] INFO: 1. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:08:00] HTTP: ::1 - - [23/Apr/2025:20:38:00 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:08:03] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:08:03] INFO: 1. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:08:03] HTTP: ::1 - - [23/Apr/2025:20:38:03 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:09:22] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:09:22] INFO: 1. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:09:22] HTTP: ::1 - - [23/Apr/2025:20:39:22 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:14:06] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:14:06] HTTP: ::1 - - [23/Apr/2025:20:44:06 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:14:06] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:14:06] HTTP: ::1 - - [23/Apr/2025:20:44:06 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:14:08] INFO: Successfully obtained access token
+[2025-04-24 02:14:08] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://478a-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 02:14:08] HTTP: ::1 - - [23/Apr/2025:20:44:08 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3Ad3ba1f7ec4ccdd89228d866af50aa13d&state=GighsTpZUxTQtpTHi4kWZA HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:14:17] INFO: Successfully fetched tasks from Asana
+[2025-04-24 02:14:17] HTTP: ::1 - - [23/Apr/2025:20:44:17 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:14:31] WARN: ❌ Invalid webhook signature
+[2025-04-24 02:14:31] HTTP: ::1 - - [23/Apr/2025:20:44:31 +0000] "POST /webhook/asana HTTP/1.1" 401 12 "-" "Asana"
+[2025-04-24 02:15:02] WARN: ❌ Invalid webhook signature
+[2025-04-24 02:15:02] HTTP: ::1 - - [23/Apr/2025:20:45:02 +0000] "POST /webhook/asana HTTP/1.1" 401 12 "-" "Asana"
+[2025-04-24 02:18:04] WARN: ❌ Invalid webhook signature
+[2025-04-24 02:18:04] HTTP: ::1 - - [23/Apr/2025:20:48:04 +0000] "POST /webhook/asana HTTP/1.1" 401 12 "-" "Asana"
+[2025-04-24 02:18:06] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:18:06] HTTP: ::1 - - [23/Apr/2025:20:48:06 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:18:06] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:18:06] HTTP: ::1 - - [23/Apr/2025:20:48:06 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:18:08] INFO: Successfully obtained access token
+[2025-04-24 02:18:08] INFO: [Asana Webhook] Already exists for project 1210056150801612 and URL https://478a-49-36-123-190.ngrok-free.app/webhook/asana
+[2025-04-24 02:18:08] HTTP: ::1 - - [23/Apr/2025:20:48:08 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A39807a04df7bf214072602633e52893b&state=gAlV1ViBA3W98X3MY-fHTw HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:18:14] INFO: Successfully fetched tasks from Asana
+[2025-04-24 02:18:14] HTTP: ::1 - - [23/Apr/2025:20:48:14 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:14] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:19:14] HTTP: ::1 - - [23/Apr/2025:20:49:14 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:14] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:19:14] HTTP: ::1 - - [23/Apr/2025:20:49:14 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:15] INFO: Successfully obtained access token
+[2025-04-24 02:19:17] ERROR: ❌ Webhook request not recognized
+[2025-04-24 02:19:17] HTTP: ::1 - - [23/Apr/2025:20:49:17 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 02:19:17] ERROR: [Asana Webhook] Registration failed:
+[2025-04-24 02:19:17] ERROR: OAuth failed: Request failed with status code 400
+[2025-04-24 02:19:17] HTTP: ::1 - - [23/Apr/2025:20:49:17 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A3e9861e6138b495504473822448fe6f5&state=-BAtcaWNIk9VA3laJ5UM4g HTTP/1.1" 500 12 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:33] HTTP: ::1 - - [23/Apr/2025:20:49:33 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:35] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:19:35] HTTP: ::1 - - [23/Apr/2025:20:49:35 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:36] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:19:36] HTTP: ::1 - - [23/Apr/2025:20:49:36 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:19:37] INFO: Successfully obtained access token
+[2025-04-24 02:19:39] ERROR: ❌ Webhook request not recognized
+[2025-04-24 02:19:39] HTTP: ::1 - - [23/Apr/2025:20:49:39 +0000] "POST /webhook/asana HTTP/1.1" 400 11 "-" "Asana"
+[2025-04-24 02:19:39] ERROR: [Asana Webhook] Registration failed:
+[2025-04-24 02:19:39] ERROR: OAuth failed: Request failed with status code 400
+[2025-04-24 02:19:39] HTTP: ::1 - - [23/Apr/2025:20:49:39 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A37b0d9c2c6ba42545a3e1c0cb38c8dd6&state=YdZJR9HriF0pEyVRBkz69Q HTTP/1.1" 500 12 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:21:11] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:21:11] HTTP: ::1 - - [23/Apr/2025:20:51:11 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:21:13] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:21:13] HTTP: ::1 - - [23/Apr/2025:20:51:13 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:21:14] INFO: Successfully obtained access token
+[2025-04-24 02:21:15] INFO: ✅ Stored new X-Hook-Secret from Asana
+[2025-04-24 02:21:15] HTTP: ::1 - - [23/Apr/2025:20:51:15 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:21:16] INFO: [Asana Webhook] Successfully registered: {"data":{"gid":"1210062259137855","resource_type":"webhook","resource":{"gid":"1210056150801612","resource_type":"project","name":"Ayush-Assignment"},"target":"https://0eaa-49-36-123-190.ngrok-free.app/webhook/asana","active":true,"is_workspace_webhook":false,"failure_deletion_timestamp":null,"created_at":"2025-04-23T20:51:15.461Z","last_failure_at":null,"last_failure_content":"","last_success_at":"2025-04-23T20:51:16.106Z","delivery_retry_count":0,"next_attempt_after":null,"filters":[]},"X-Hook-Secret":"c1c7789d10c4984e6514d6f5e40bd55b"}
+[2025-04-24 02:21:16] HTTP: ::1 - - [23/Apr/2025:20:51:16 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A320b0b72674653ebe3053427e6bd0849&state=qDDQerydnbOPbtnLpNSOcA HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:21:16] INFO: 📥 Received 0 event(s) from Asana:
+[2025-04-24 02:21:16] HTTP: ::1 - - [23/Apr/2025:20:51:16 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:21:21] INFO: Successfully fetched tasks from Asana
+[2025-04-24 02:21:21] HTTP: ::1 - - [23/Apr/2025:20:51:21 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:23:24] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:23:24] HTTP: ::1 - - [23/Apr/2025:20:53:24 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:23:24] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 02:23:24] HTTP: ::1 - - [23/Apr/2025:20:53:24 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:23:26] INFO: Successfully obtained access token
+[2025-04-24 02:23:27] INFO: ✅ Stored new X-Hook-Secret from Asana
+[2025-04-24 02:23:27] HTTP: ::1 - - [23/Apr/2025:20:53:27 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:23:28] INFO: [Asana Webhook] Successfully registered: {"data":{"gid":"1210062264343880","resource_type":"webhook","resource":{"gid":"1210056150801612","resource_type":"project","name":"Ayush-Assignment"},"target":"https://24bf-49-36-123-190.ngrok-free.app/webhook/asana","active":true,"is_workspace_webhook":false,"failure_deletion_timestamp":null,"created_at":"2025-04-23T20:53:27.209Z","last_failure_at":null,"last_failure_content":"","last_success_at":"2025-04-23T20:53:27.803Z","delivery_retry_count":0,"next_attempt_after":null,"filters":[]},"X-Hook-Secret":"bb4951c1e16e33d3621a58d45cfd27ef"}
+[2025-04-24 02:23:28] HTTP: ::1 - - [23/Apr/2025:20:53:28 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3Ad1d17b9e0a1b702bc0ec68cee6719d49&state=Iq52UPhuDSUo3XzQJSgZjA HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 02:23:28] INFO: 📥 Received 0 event(s) from Asana:
+[2025-04-24 02:23:28] HTTP: ::1 - - [23/Apr/2025:20:53:28 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:24:11] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:24:11] INFO: 1. Resource 1210056150801629 (task) - Action: changed
+[2025-04-24 02:24:11] HTTP: ::1 - - [23/Apr/2025:20:54:11 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:25:34] INFO: 📥 Received 2 event(s) from Asana:
+[2025-04-24 02:25:34] INFO: 1. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:25:34] INFO: 2. Resource 1210062219376372 (task) - Action: changed
+[2025-04-24 02:25:34] HTTP: ::1 - - [23/Apr/2025:20:55:34 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:25:44] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:25:44] INFO: 1. Resource 1210056150801629 (task) - Action: changed
+[2025-04-24 02:25:44] HTTP: ::1 - - [23/Apr/2025:20:55:44 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"
+[2025-04-24 02:25:48] INFO: 📥 Received 1 event(s) from Asana:
+[2025-04-24 02:25:48] INFO: 1. Resource 1210056150801627 (task) - Action: changed
+[2025-04-24 02:25:48] HTTP: ::1 - - [23/Apr/2025:20:55:48 +0000] "POST /webhook/asana HTTP/1.1" 200 2 "-" "Asana"

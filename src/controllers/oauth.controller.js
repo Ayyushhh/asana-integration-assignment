@@ -1,8 +1,8 @@
 import axios from "axios";
 import crypto from 'crypto';
 import logger from '../utils/logger.js';
-import { asanaClientID, asanaClientSecret, asanaRedirectURI } from "../config/index.js";
-
+import { asanaClientID, asanaClientSecret, asanaRedirectURI, asanaProjectGID, asanaWorkspaceGID } from "../config/index.js";
+import { registerWebhook } from "../utils/asana.js";
 
 function base64URLEncode(str) {
     return str.toString('base64')
@@ -64,6 +64,13 @@ const handleOAuthCallback = async (req, res) => {
         req.session.tokenExpiresAt = Date.now() + expires_in * 1000;
 
         logger.info('Successfully obtained access token');
+
+        const testProjectOrWorkspaceGid = asanaProjectGID;
+        const targetWebhookUrl = 'https://24bf-49-36-123-190.ngrok-free.app/webhook/asana';
+
+        await registerWebhook(access_token, testProjectOrWorkspaceGid, targetWebhookUrl, asanaWorkspaceGID);
+
+
         res.send('OAuth success with PKCE! You can now fetch tasks at /tasks');
     } catch (err) {
         logger.error(`OAuth failed: ${err.message}`);
