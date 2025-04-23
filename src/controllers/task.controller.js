@@ -1,10 +1,18 @@
 import axios from 'axios';
-import { getAccessToken } from './oauth.controller.js';
+import { refreshAccessToken } from '../services/refreshToken.service.js';
+import logger from '../utils/logger.js';
+
 
 const getTasks = async (req, res) => {
   try {
-    const token = getAccessToken();
-    if (!token) return res.status(401).json({ error: 'Not authenticated. Go to /oauth/authorize' });
+    const token = req.session.accessToken;
+    if (!token) {
+        return res.status(401).json({ error: 'Not authenticated' });
+    }
+
+    if (Date.now() >= req.session.tokenExpiresAt) {
+        token = await refreshAccessToken(req);
+    }
 
     const response = await axios.get('https://app.asana.com/api/1.0/tasks', {
       headers: {
@@ -18,29 +26,15 @@ const getTasks = async (req, res) => {
       }
     });
 
+    logger.info('Successfully fetched tasks from Asana');
     res.json(response.data);
   } catch (err) {
-    console.error(err.response?.data || err.message);
+    logger.error(`Failed to fetch tasks: ${err.response?.data || err.message}`);
     res.status(500).json({ error: 'Failed to fetch tasks' });
   }
 };
 
-const getWorkspaces = async (req, res) => {
-    try {
-      const token = getAccessToken();
-      const response = await axios.get('https://app.asana.com/api/1.0/workspaces', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-  
-      res.json(response.data);
-    } catch (err) {
-      console.error(err.response?.data || err.message);
-      res.status(500).json({ error: 'Failed to fetch workspaces' });
-    }
+export { 
+    getTasks 
 };
 
-export { 
-    getTasks, getWorkspaces 
-};

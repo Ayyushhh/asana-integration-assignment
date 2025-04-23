@@ -1,12 +1,8 @@
 import axios from "axios";
 import crypto from 'crypto';
+import logger from '../utils/logger.js';
 import { asanaClientID, asanaClientSecret, asanaRedirectURI } from "../config/index.js";
 
-let oauthSession = {
-    codeVerifier: null,
-    state: null,
-    token: null,
-};
 
 function base64URLEncode(str) {
     return str.toString('base64')
@@ -24,8 +20,10 @@ const redirectToAsana = (req, res) => {
     const codeChallenge = base64URLEncode(sha256(codeVerifier));
     const state = base64URLEncode(crypto.randomBytes(16));
 
-    oauthSession.codeVerifier = codeVerifier;
-    oauthSession.state = state;
+    req.session.codeVerifier = codeVerifier;
+    req.session.state = state;
+
+    logger.info('Initiating OAuth flow with PKCE');
 
     const authUrl = `https://app.asana.com/-/oauth_authorize?` +
     `client_id=${asanaClientID}` +
@@ -35,14 +33,15 @@ const redirectToAsana = (req, res) => {
     `&scope=default` +
     `&code_challenge_method=S256` +
     `&code_challenge=${codeChallenge}`;
-    
+     
     res.redirect(authUrl);
 };
 
 const handleOAuthCallback = async (req, res) => {
     const { code, state } = req.query;
     
-    if (state !== oauthSession.state) {
+    if (!req.session.state || state !== req.session.state) {
+        logger.warn('Invalid state parameter detected. Potential CSRF attack.');
         return res.status(403).send('Invalid state parameter. Potential CSRF attack.');
     }
 
@@ -54,26 +53,26 @@ const handleOAuthCallback = async (req, res) => {
             grant_type: 'authorization_code',
             redirect_uri: asanaRedirectURI,
             code,
-            code_verifier: oauthSession.codeVerifier,
+            code_verifier: req.session.codeVerifier,
           }
         });
-    
-        const accessToken = response.data.access_token;
-        oauthSession.token = accessToken;
-    
-        console.log('Access Token:', accessToken);
+
+        const { access_token, refresh_token, expires_in } = response.data;
+        
+        req.session.accessToken = access_token;
+        req.session.refreshToken = refresh_token;
+        req.session.tokenExpiresAt = Date.now() + expires_in * 1000;
+
+        logger.info('Successfully obtained access token');
         res.send('OAuth success with PKCE! You can now fetch tasks at /tasks');
     } catch (err) {
-        console.error('OAuth Error:', err.response?.data || err.message);
+        logger.error(`OAuth failed: ${err.message}`);
         res.status(500).send('OAuth failed');
     }
 }
 
-const getAccessToken = () => oauthSession.token;
-
 export {
     redirectToAsana,
-    handleOAuthCallback,
-    getAccessToken
+    handleOAuthCallback
 };
   

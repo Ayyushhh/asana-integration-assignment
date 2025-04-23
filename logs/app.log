@@ -1,0 +1,17 @@
+[2025-04-23 23:27:49] HTTP: ::1 - - [23/Apr/2025:17:57:49 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-23 23:27:50] HTTP: ::1 - - [23/Apr/2025:17:57:50 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-23 23:27:51] HTTP: ::1 - - [23/Apr/2025:17:57:51 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A9f2ebd294bcb756fdef4fa5e8f73cef2&state=tRE0UhkM4wSo9JgDQYXolg HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-23 23:28:18] HTTP: ::1 - - [23/Apr/2025:17:58:18 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-23 23:55:24] HTTP: ::1 - - [23/Apr/2025:18:25:24 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "PostmanRuntime/7.43.0"
+[2025-04-23 23:55:31] HTTP: ::1 - - [23/Apr/2025:18:25:31 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:10:57] HTTP: ::1 - - [23/Apr/2025:18:40:57 +0000] "GET /tasks HTTP/1.1" 401 29 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:11:28] WARN: Invalid state parameter detected. Potential CSRF attack.
+[2025-04-24 00:11:28] HTTP: ::1 - - [23/Apr/2025:18:41:28 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A9f2ebd294bcb756fdef4fa5e8f73cef2&state=tRE0UhkM4wSo9JgDQYXolg HTTP/1.1" 403 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:11:35] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 00:11:35] HTTP: ::1 - - [23/Apr/2025:18:41:35 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:11:35] INFO: Initiating OAuth flow with PKCE
+[2025-04-24 00:11:35] HTTP: ::1 - - [23/Apr/2025:18:41:35 +0000] "GET /oauth/authorize HTTP/1.1" 302 329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:11:37] INFO: Successfully obtained access token
+[2025-04-24 00:11:37] HTTP: ::1 - - [23/Apr/2025:18:41:37 +0000] "GET /oauth/callback?code=2%2F1210055943482209%2F1210056155812558%3A8cb04795471f9a86366bfda24de7d600&state=ymv4unNrhtFntcPe0h-4Gw HTTP/1.1" 200 58 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+[2025-04-24 00:11:40] INFO: Successfully fetched tasks from Asana
+[2025-04-24 00:11:40] HTTP: ::1 - - [23/Apr/2025:18:41:40 +0000] "GET /tasks HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
