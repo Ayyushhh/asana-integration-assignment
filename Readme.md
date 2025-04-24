@@ -102,15 +102,6 @@ Webhook events are validated using the `x-hook-secret` and `x-hook-signature` he
 
 ---
 
-## ✅ TODO / Future Improvements
-
-- [ ] Add database support to persist webhook secrets
-- [ ] Refresh tokens on expiry
-- [ ] Unit tests for webhook handler
-- [ ] IP Whitelisting for security
-
----
-
 ## 👨‍💼 Author
 
 - **Ayush Jain**  
